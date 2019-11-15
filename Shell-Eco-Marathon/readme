@@ -1,7 +1,7 @@
-Two files make up this project, the code that ran our car, the Volts-Wagon. This was run on a Raspberry Pi. Excessive for this project
-in retrospect it could have been run on a single microcontroller, but alas we were in too deep -- 
-an i2c file for communicating with an Arduino microcontroller that ran a motor and its encoder data
-and a main file for interpreting and displaying all of this info to the driver of the vehicle
+Two files make up this project, the code that ran our car, the Volts-Wagon. This was run on a Raspberry Pi and a Teensy 3.1. 
+Excessive for this project -- in retrospect it probably could have been run on a single microcontroller, but alas we were in too deep when that was realized 
+an i2c file for communicating with Arduino and Teensy microcontrollers that ran a motor and its encoder data. a perfect application of
+i2c -- spi would have caused way too many wires to be needed and the speed wasn't necessary for this application and a main file for interpreting and displaying all of this info to the driver of the vehicle
 using ghetto sensor fusion to put it all together -- encoder for speed when motor is on (most accurate),
 GPS for speed when motor is off (less accurate but encoder doesn't work with no power), and BMS for energy usage.
 
